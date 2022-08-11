@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Aleroms/FrontendMentor-Projects)
-- Live Site URL: [Add live site URL here](https://nimble-kheer-3aa443.netlify.app/)
+- Solution URL: [Solution URL](https://github.com/Aleroms/FrontendMentor-Projects)
+- Live Site URL: [Live Site URL](https://nimble-kheer-3aa443.netlify.app/)
 
 ## My process
 Start with what I knew and work from there. I started creating a container and then putting all given info into h2,h1,divs,etc. Then, started styling that.
