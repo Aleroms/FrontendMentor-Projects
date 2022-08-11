@@ -56,24 +56,6 @@ Afterwards, I did margin and padding of elements. And finished off doing media q
 At first, it was really difficult because I did not know how to start the project. So I looked up some resources on how to approach the problem. By doing the html "structure" first before trying to style it, the problem became more managable. After I got help I decided to restart the project on my own to see how I could apply what i've learned.
 
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
 ### Continued development
 
 I learned that I need to do research on the html basics like flex and grid. Fun challenge.
