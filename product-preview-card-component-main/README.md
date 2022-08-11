@@ -67,7 +67,6 @@ I learned that I need to do research on the html basics like flex and grid. Fun 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@Aleroms](https://www.frontendmentor.io/profile/Aleroms)
 
 ## Acknowledgments
