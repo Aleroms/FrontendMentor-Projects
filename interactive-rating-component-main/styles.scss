@@ -1,0 +1,143 @@
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-grey: hsl(213, 19%, 18%);
+$very-dark-grey: hsl(216, 12%, 8%);
+@mixin hover-effect {
+  transition: 0.3s;
+}
+#container {
+  visibility: visible;
+}
+#thank-you {
+  visibility: hidden;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin: 2rem;
+  }
+  .selection {
+    background-color: $dark-grey;
+    border-radius: 50px;
+
+    p {
+      margin: 10px;
+      padding: 0 1rem;
+      color: $orange;
+    }
+  }
+  .txt {
+    margin-top: 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.3rem;
+  }
+}
+
+body {
+  height: 100vh;
+  font-family: "Overpass", sans-serif;
+  background: $very-dark-grey;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+
+  .container {
+    width: 350px;
+    padding: 10px 20px;
+    background: linear-gradient(140deg, $dark-grey, $very-dark-grey);
+    border-radius: 20px;
+  }
+
+  h2 {
+    color: $white;
+    font-weight: 700;
+  }
+  p {
+    color: $light-grey;
+    padding-right: 1.5rem;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-left: -1.5rem;
+
+    li {
+      list-style: none;
+
+      button {
+        color: $light-grey;
+        padding: 15px 20px;
+        border-radius: 50px;
+        font-weight: 400;
+        border: none;
+        background-color: $dark-grey;
+        cursor: pointer;
+
+        &:hover {
+          @include hover-effect;
+          background-color: $orange;
+          color: $white;
+        }
+        &:focus {
+          background-color: $light-grey;
+          color: $white;
+        }
+      }
+    }
+  }
+  .btn {
+    margin: 0.625rem;
+
+    .btn-review {
+      width: 100%;
+      color: $white;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      padding: 0.625rem;
+      background-color: $orange;
+      border: none;
+      border-radius: 50px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $white;
+        color: $orange;
+        @include hover-effect;
+      }
+    }
+  }
+  .star {
+    background: hsl(213, 18%, 22%);
+    border-radius: 50px;
+    margin-top: 1rem;
+    padding: 0.8rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: $light-grey;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media (max-width: "640px") {
+  body {
+    .container {
+      width: 300px;
+    }
+  }
+}

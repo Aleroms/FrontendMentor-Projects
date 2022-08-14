@@ -1,0 +1,123 @@
+#container {
+  visibility: visible;
+}
+
+#thank-you {
+  visibility: hidden;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#thank-you img {
+  margin: 2rem;
+}
+#thank-you .selection {
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 50px;
+}
+#thank-you .selection p {
+  margin: 10px;
+  padding: 0 1rem;
+  color: hsl(25deg, 97%, 53%);
+}
+#thank-you .txt {
+  margin-top: 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.3rem;
+}
+
+body {
+  height: 100vh;
+  font-family: "Overpass", sans-serif;
+  background: hsl(216deg, 12%, 8%);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+}
+body .container {
+  width: 350px;
+  padding: 10px 20px;
+  background: linear-gradient(140deg, hsl(213deg, 19%, 18%), hsl(216deg, 12%, 8%));
+  border-radius: 20px;
+}
+body h2 {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+}
+body p {
+  color: hsl(217deg, 12%, 63%);
+  padding-right: 1.5rem;
+}
+body ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-left: -1.5rem;
+}
+body ul li {
+  list-style: none;
+}
+body ul li button {
+  color: hsl(217deg, 12%, 63%);
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-weight: 400;
+  border: none;
+  background-color: hsl(213deg, 19%, 18%);
+  cursor: pointer;
+}
+body ul li button:hover {
+  transition: 0.3s;
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+}
+body ul li button:focus {
+  background-color: hsl(217deg, 12%, 63%);
+  color: hsl(0deg, 0%, 100%);
+}
+body .btn {
+  margin: 0.625rem;
+}
+body .btn .btn-review {
+  width: 100%;
+  color: hsl(0deg, 0%, 100%);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 0.625rem;
+  background-color: hsl(25deg, 97%, 53%);
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+body .btn .btn-review:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+  transition: 0.3s;
+}
+body .star {
+  background: hsl(213deg, 18%, 22%);
+  border-radius: 50px;
+  margin-top: 1rem;
+  padding: 0.8rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(217deg, 12%, 63%);
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+@media (max-width: 640px) {
+  body .container {
+    width: 300px;
+  }
+}/*# sourceMappingURL=styles.css.map */
