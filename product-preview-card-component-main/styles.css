@@ -51,6 +51,9 @@
     font-weight: 700;
     cursor: pointer;
 }
+.btn:hover{
+    background-color: hsl(158, 36%, 26%);
+}
 .btn img {
     margin-right: 10px;
 }
