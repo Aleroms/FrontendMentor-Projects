@@ -1,0 +1,129 @@
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+@mixin border {
+  border-radius: 10px;
+}
+@mixin btn {
+  transition: 0.5s ease;
+}
+@mixin btn-trans {
+  transform: scale(1.1);
+  transform: translate(0px, -5px);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+* {
+  font-family: "Red Hat Display", sans-serif;
+  color: $Desaturated-blue;
+}
+body {
+  background-color: $Pale-blue;
+  height: calc(100vh - 0.01px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    color: $Dark-blue;
+    text-align: center;
+    font-weight: 900;
+  }
+  p {
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding: 0 2rem;
+  }
+  ul {
+    list-style: none;
+
+    //Payment-button
+    :first-child {
+      color: $Dark-blue;
+      font-weight: 900;
+    }
+    :last-child {
+      font-weight: 500;
+    }
+  }
+}
+.container {
+  background-color: white;
+  width: 375px;
+  @include border;
+
+  .banner-img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .text-box {
+    padding: 0.625rem 1rem;
+  }
+
+  .billing {
+    background-color: $Very-pale-blue;
+    padding: 0.625rem;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    align-items: center;
+    @include border;
+
+    a {
+      color: $Bright-blue;
+      font-weight: 700;
+    }
+  }
+  .btn-box {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    align-items: center;
+    margin-top: 1.4rem;
+
+    //payment button
+    :first-child {
+      color: white;
+      background-color: $Bright-blue;
+      border: none;
+      padding: 15px 0;
+      box-shadow: 5px 5px 3px 1px;
+      margin-bottom: 1.625rem;
+      width: 90%;
+      cursor: pointer;
+      font-weight: 700;
+
+      @include border;
+      @include btn;
+      &:hover {
+        background-color: hsl(245, 74%, 60%);
+        @include btn-trans;
+      }
+    }
+
+    //cancel button
+    :last-child {
+      background-color: transparent;
+      border: none;
+      color: $Desaturated-blue;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      @include btn;
+
+      &:hover {
+        color: $Dark-blue;
+      }
+    }
+  }
+}
