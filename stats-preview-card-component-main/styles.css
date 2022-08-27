@@ -1,0 +1,127 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 0.01px);
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(233deg, 47%, 7%);
+}
+body img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+body p {
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.5rem;
+  color: hsla(0deg, 0%, 100%, 0.6);
+  font-weight: 400;
+}
+body h1 {
+  font-weight: 700;
+  margin: 1rem;
+  padding: 0 0.625rem;
+}
+body h1 strong {
+  color: hsl(277deg, 64%, 61%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 375px;
+  border-radius: 10px;
+  background-color: hsl(244deg, 38%, 16%);
+  text-align: center;
+}
+.container .text-box {
+  padding: 1.625rem;
+}
+.container .highlights {
+  margin: 1rem;
+}
+.container .highlights .hl-list {
+  list-style: none;
+}
+.container .highlights .hl-list :first-child {
+  margin-top: 2rem;
+}
+.container .highlights .hl-list li {
+  margin-top: 1rem;
+}
+.container .highlights .hl-list p {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
+.container .highlights .hl-list h2 {
+  font-weight: 700;
+}
+.container .header-img {
+  position: relative;
+}
+.container .header-img .overlay {
+  background-color: hsla(277deg, 83%, 31%, 0.638);
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 4px);
+  top: 0;
+}
+
+@media (min-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 68%;
+    text-align: start;
+  }
+  .container .title h1 {
+    margin-top: 1.4rem;
+    font-size: 2.125rem;
+  }
+  .container .title p {
+    margin: 1rem;
+    padding: 0 0.625rem;
+  }
+  .container .header-img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+  }
+  .container .header-img .overlay {
+    border-radius: 0 10px 10px 0;
+    height: 100%;
+  }
+  .container .text-box {
+    margin: 1rem;
+    padding-right: 2rem;
+  }
+  .container .text-box .highlights .hl-list {
+    display: flex;
+    margin-top: 6rem;
+  }
+  .container .text-box .highlights .hl-list li {
+    margin: 1rem;
+  }
+  .container .text-box .highlights .hl-list li h2 {
+    margin: 0;
+  }
+  .container .text-box .highlights .hl-list li p {
+    margin: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */
