@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 0.01px);
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0deg, 0%, 95%);
+}
+body h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 1rem;
+  color: white;
+}
+body p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.7em;
+  padding-right: 2.325rem;
+  padding-bottom: 3rem;
+}
+body img {
+  margin: 1rem;
+}
+
+.card {
+  padding: 1.625rem;
+}
+
+.btn-box {
+  margin: 2rem 1rem;
+}
+.btn-box .btn {
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 0.625rem;
+  width: 70%;
+  transition: 0.3s ease-in-out;
+}
+.btn-box .btn:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  border: hsla(0deg, 0%, 100%, 0.75) 2px solid;
+}
+.btn-box .btn-one {
+  color: hsl(31deg, 77%, 52%);
+}
+.btn-box .btn-two {
+  color: hsl(184deg, 100%, 22%);
+}
+.btn-box .btn-three {
+  color: hsl(179deg, 100%, 13%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  width: 56.5%;
+}
+.container .one {
+  background: hsl(31deg, 77%, 52%);
+  border-radius: 10px 0 0 10px;
+}
+.container .two {
+  background-color: hsl(184deg, 100%, 22%);
+}
+.container .three {
+  background-color: hsl(179deg, 100%, 13%);
+  border-radius: 0 10px 10px 0;
+}
+
+/* - - - text box - - - */
+.text-box {
+  margin: 1rem;
+  max-height: 40%;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    box-sizing: border-box;
+  }
+  .container p {
+    padding: 0;
+    font-size: 8px;
+  }
+  .container .btn-box {
+    margin-top: 1rem;
+  }
+  .container .btn-box .btn {
+    width: 100%;
+    padding: 0.5rem 0.125rem;
+  }
+  .text-box {
+    margin: 0;
+  }
+}
+@media (max-width: 560px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    width: 85%;
+    max-height: 75%;
+  }
+  .container p {
+    font-size: large;
+  }
+  .container .one {
+    border-radius: 10px 10px 0 0;
+  }
+  .container .three {
+    border-radius: 0 0 10px 10px;
+  }
+  .text-box p {
+    padding-right: 1.825rem;
+    margin: 1rem;
+    font-size: small;
+  }
+  .btn-box {
+    margin: 1rem;
+  }
+  .btn-box .btn {
+    width: 50% !important;
+  }
+  body {
+    height: 100%;
+    padding: 7rem 0;
+  }
+}
+.attribution {
+  margin: 1rem 0.125rem;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(31deg, 77%, 52%);
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=styles.css.map */
