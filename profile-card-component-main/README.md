@@ -20,7 +20,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Screenshot
 
-![](./capture.jpg)
+![](Capture.JPG)
 
 ### Links
 
@@ -35,4 +35,4 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - Mobile-first workflow
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/aleroms)
+- Frontend Mentor - [@Aleroms](https://www.frontendmentor.io/profile/aleroms)
