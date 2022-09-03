@@ -25,8 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
-- Live Site URL: [Netlify](https://stirring-toffee-99a72c.netlify.app/)
+- Live Site URL: [Netlify](https://capable-malasada-b688ec.netlify.app)
 
 ## My process
 
