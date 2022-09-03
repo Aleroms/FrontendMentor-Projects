@@ -1,0 +1,134 @@
+// Text
+$very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$soft-red: hsl(14, 88%, 65%);
+//BG gradient
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+//Dividers
+$light-grayish-blue: hsl(240, 5%, 91%);
+//Nuetral text
+$very-dark-grayish-blue: hsl(237, 12%, 33%);
+$dark-grayish-blue: hsl(240, 6%, 50%);
+
+@mixin bg-gradient {
+  background: linear-gradient(180deg, $soft-violet, $soft-blue);
+}
+* {
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: calc(100vh - 0.1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include bg-gradient;
+  background-repeat: no-repeat;
+
+  h2 {
+    color: $very-dark-desaturated-blue;
+    padding: 0 0.625rem;
+    font-weight: 400;
+  }
+  hr {
+    height: 1px;
+    background-color: $light-grayish-blue;
+    border: none;
+  }
+  picture {
+    margin-top: -40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 70%;
+    }
+  }
+}
+.card {
+  border-radius: 20px;
+  background-color: white;
+  max-width: 350px;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+.active-h2 {
+  font-weight: bolder;
+  color: black;
+}
+.active-chevron {
+  transform: rotate(180deg);
+}
+.text-box {
+  margin: 1rem;
+  h1 {
+    margin: 1rem;
+    text-align: center;
+    color: $very-dark-desaturated-blue;
+  }
+  h2 {
+    font-size: 13px;
+    padding: 0.625rem;
+    color: $dark-grayish-blue;
+  }
+  p {
+    font-size: 12px;
+    color: $dark-grayish-blue;
+    padding-left: 0.625rem;
+    padding-right: 2rem;
+  }
+  .title {
+    display: flex;
+
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .entry {
+    margin: 1rem 0;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+#bg-desktop {
+  width: 50%;
+  position: relative;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .card {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+  }
+  body {
+    picture {
+      margin-top: 40px;
+      margin-left: -150px;
+      width: 150%;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70%;
+      }
+    }
+  }
+  .text-box {
+    padding-right: 1rem;
+    h1 {
+      text-align: start;
+    }
+  }
+}
