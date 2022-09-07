@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  height: calc(100vh - 0.1px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-pattern-top {
+  background-image: url(./images/bg-pattern-top-desktop.svg);
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+}
+
+.bg-pattern-bot {
+  background-image: url(./images/bg-pattern-bottom-desktop.svg);
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+}
+
+.container {
+  max-width: 375px;
+  padding: 1rem;
+  margin: auto;
+  z-index: 2;
+}
+
+.container-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-bot .testimonial {
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: column;
+}
+.container-bot .testimonial .card-one {
+  margin: 1rem;
+  background-color: hsl(300deg, 43%, 22%);
+  border-radius: 10px;
+}
+.container-bot .testimonial .card-two {
+  margin: 1rem;
+  background-color: hsl(300deg, 43%, 22%);
+  border-radius: 10px;
+}
+.container-bot .testimonial .card-three {
+  margin: 1rem;
+  background-color: hsl(300deg, 43%, 22%);
+  border-radius: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  list-style: none;
+}
+.profile-info li img {
+  border-radius: 50px;
+  width: 2rem;
+  margin-right: 1rem;
+}
+.profile-info .card-name {
+  color: white;
+  font-weight: 700;
+  padding: 0.125rem;
+  font-size: 1rem;
+}
+.profile-info .card-buyer {
+  color: hsl(333deg, 80%, 67%);
+  font-weight: 400;
+  padding: 0.125rem;
+  font-size: 1rem;
+}
+
+.profile-text {
+  color: white;
+  padding: 1rem;
+  line-height: 1.3rem;
+}
+
+.heading {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.heading h1 {
+  color: hsl(300deg, 43%, 22%);
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 1rem;
+}
+.heading p {
+  color: hsl(303deg, 10%, 53%);
+  padding: 0.625rem;
+  font-weight: 500;
+  line-height: 1.3rem;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.review .review-reviews {
+  background-color: hsl(300deg, 24%, 96%);
+  padding: 0.625rem;
+  margin: 0.625rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  color: hsl(300deg, 43%, 22%);
+}
+.review .review-guru {
+  background-color: hsl(300deg, 24%, 96%);
+  padding: 0.625rem;
+  margin: 0.625rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  color: hsl(300deg, 43%, 22%);
+}
+.review .review-best-tech {
+  background-color: hsl(300deg, 24%, 96%);
+  padding: 0.625rem;
+  margin: 0.625rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  color: hsl(300deg, 43%, 22%);
+}
+
+.star {
+  margin: 0.325rem;
+}
+.star img {
+  padding: 0 0.125rem;
+}
+
+@media (min-width: 800px) {
+  .container {
+    min-width: 85%;
+  }
+  .container-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .container-top .heading {
+    text-align: start;
+  }
+  .container-top .heading :last-child {
+    padding: 1rem;
+    width: 80%;
+    line-height: 1.3rem;
+  }
+  .container-top .review {
+    align-items: flex-end;
+    font-size: 15px;
+  }
+  .container-top .review .star img {
+    width: 10px;
+  }
+  .container-top .review .review-reviews {
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 0.125rem 0;
+    width: 80%;
+    margin-right: 20%;
+  }
+  .container-top .review .review-guru {
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 0.125rem 0;
+    width: 80%;
+    margin-right: 12%;
+  }
+  .container-top .review .review-best-tech {
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 0.125rem 0;
+    width: 80%;
+  }
+  .container-bot .testimonial {
+    flex-direction: row;
+    padding: 0;
+  }
+  .container-bot .testimonial .card-one {
+    margin: 0.625rem;
+    height: 80%;
+    font-size: 13px;
+  }
+  .container-bot .testimonial .card-two {
+    margin: 0.625rem;
+    height: 80%;
+    font-size: 13px;
+    margin-top: 2rem;
+  }
+  .container-bot .testimonial .card-three {
+    margin: 0.625rem;
+    height: 80%;
+    font-size: 13px;
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 1000px) {
+  .container {
+    min-width: 800px;
+  }
+}/*# sourceMappingURL=styles.css.map */
