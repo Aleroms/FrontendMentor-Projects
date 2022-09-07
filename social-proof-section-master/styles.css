@@ -4,27 +4,16 @@
 }
 
 body {
+  background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+  background-position: left -185px top -236px, right 10px bottom -300px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain, contain;
   font-family: "League Spartan", sans-serif;
   height: calc(100vh - 0.1px);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.bg-pattern-top {
-  background-image: url(./images/bg-pattern-top-desktop.svg);
-  width: 100%;
-  height: 50%;
-  position: absolute;
-  top: 0;
-}
-
-.bg-pattern-bot {
-  background-image: url(./images/bg-pattern-bottom-desktop.svg);
-  width: 100%;
-  height: 50%;
-  position: absolute;
-  bottom: 0;
 }
 
 .container {

@@ -45,6 +45,12 @@ $White: hsl(0, 0%, 100%);
   padding: 0;
 }
 body {
+  background-image: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-desktop.svg);
+  background-position: left -185px top -236px, right 10px bottom -300px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain, contain;
   font-family: "League Spartan", sans-serif;
   height: calc(100vh - 0.1px);
   display: flex;
@@ -52,16 +58,16 @@ body {
   align-items: center;
 }
 //main content in container
-.bg-pattern-top {
-  background-image: url(./images/bg-pattern-top-desktop.svg);
-  @include bg-pattern();
-  top: 0;
-}
-.bg-pattern-bot {
-  background-image: url(./images/bg-pattern-bottom-desktop.svg);
-  @include bg-pattern();
-  bottom: 0;
-}
+// .bg-pattern-top {
+//   background-image: url(./images/bg-pattern-top-desktop.svg);
+//   @include bg-pattern();
+//   top: 0;
+// }
+// .bg-pattern-bot {
+//   background-image: url(./images/bg-pattern-bottom-desktop.svg);
+//   @include bg-pattern();
+//   bottom: 0;
+// }
 .container {
   max-width: 375px;
   padding: 1rem;
@@ -73,7 +79,6 @@ body {
   flex-direction: column;
 }
 .container-bot {
-
   .testimonial {
     padding: 0.625rem;
     display: flex;
@@ -181,7 +186,6 @@ body {
       }
     }
     .review {
-
       align-items: flex-end;
       font-size: 15px;
       .star {
@@ -228,5 +232,3 @@ body {
     min-width: 800px;
   }
 }
-
-
