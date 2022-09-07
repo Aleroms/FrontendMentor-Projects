@@ -65,26 +65,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="https://github.com/Aleroms">Santiago Morales</a>.
     </div>
-    <script>
-      let focused;
-
-      function rating() {
-        focused = document.activeElement.id;
-        console.log(focused);
-      }
-      function submitted() {
-        let container = document.getElementById("container");
-        let thankYou = document.getElementById("thank-you");
-        let selectionTxt = document.getElementById("selection-text");
-
-        if (focused !== undefined) {
-          container.style.visibility = "hidden";
-          container.style.display = "none";
-          thankYou.style.visibility = "visible";
-          thankYou.style.display = "flex";
-          selectionTxt.innerHTML = "You selected " + focused + " out of 5";
-        }
-      }
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
