@@ -23,8 +23,13 @@ $Dark-blue: hsl(223, 47%, 23%);
 * {
   font-family: "Red Hat Display", sans-serif;
   color: $Desaturated-blue;
+  margin: 0;
+  padding: 0;
 }
 body {
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   background-color: $Pale-blue;
   height: calc(100vh - 0.01px);
   display: flex;
@@ -59,7 +64,7 @@ body {
 }
 .container {
   background-color: white;
-  width: 375px;
+  width: 350px;
   @include border;
 
   .banner-img {
