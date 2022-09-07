@@ -50,7 +50,7 @@ body {
 .container {
   display: flex;
   flex-direction: column-reverse;
-  width: 375px;
+  max-width: 375px;
   border-radius: 10px;
   background-color: $dark-desaturated-blue;
   text-align: center;
@@ -97,7 +97,8 @@ body {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 68%;
+    max-width: 1110px;
+    
     text-align: start;
 
     .title{
@@ -113,8 +114,10 @@ body {
     .header-img {
       img {
         height: 100%;
-        width: 100%;
+        max-width: 100%;
         border-radius: 0 10px 10px 0;
+        display: block;
+        object-fit: cover;
       }
       .overlay {
         border-radius: 0 10px 10px 0;
