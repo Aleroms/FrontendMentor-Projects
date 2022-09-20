@@ -1,0 +1,148 @@
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$very-dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  p {
+    color: $grayish-blue;
+  }
+  h2,
+  h1 {
+    color: $very-dark-blue;
+  }
+}
+.header {
+  margin: 1rem;
+  text-align: center;
+  h2 {
+    font-weight: 200;
+    font-size: 32px;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 32px;
+  }
+  p {
+    font-weight: 400;
+    padding: 0 25%;
+    margin-top: 1rem;
+    font-size: 14px;
+  }
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  .card {
+    margin: 1rem;
+    padding: 1.625rem 1.625rem 0 1.625rem;
+    max-height: 200px;
+    max-width: 400px;
+    box-shadow: 0px 10px 10px 5px hsla(234, 12%, 34%, 0.104);
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.1);
+    }
+
+    .card-img {
+      margin: 1.5rem 0.625rem;
+      display: flex;
+      justify-content: end;
+    }
+    p {
+      margin-top: 1rem;
+      font-size: 12px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  .supervisor {
+    border-top: 4px solid $cyan;
+    border-radius: 5px;
+    margin-top: 50%;
+  }
+  .team-builder {
+    border-top: 4px solid $red;
+    border-radius: 5px;
+  }
+  .karma {
+    border-top: 4px solid $orange;
+    border-radius: 5px;
+  }
+  .calculator {
+    border-top: 4px solid $blue;
+    border-radius: 5px;
+    margin-top: 50%;
+  }
+
+  .middle-column {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+
+  .container {
+    max-width: 375px;
+    width: 300px;
+    padding: 0;
+
+    h2{
+      font-size: 20px;
+    }
+    h1{
+      font-size: 22px;
+      margin-bottom: 1rem;
+    }
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .header {
+   margin: 1rem 0.625rem;
+   padding-top: 2rem;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    margin: 2.125rem 0;
+    .card {
+      margin: 0.625rem;
+
+      p{
+        margin-top: 0.125rem;
+      }
+      img{
+        height: 42px;
+        width: 42px;
+      }
+    }
+    .middle-column {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
