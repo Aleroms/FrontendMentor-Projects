@@ -132,6 +132,10 @@ body {
     .card {
       margin: 0.625rem;
 
+      &:hover{
+        transform: translateY(0) scale(1);
+      }
+
       p{
         margin-top: 0.125rem;
       }

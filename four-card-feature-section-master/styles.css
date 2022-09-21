@@ -122,6 +122,9 @@ body {
   .cards .card {
     margin: 0.625rem;
   }
+  .cards .card:hover {
+    transform: translateY(0) scale(1);
+  }
   .cards .card p {
     margin-top: 0.125rem;
   }
