@@ -32,7 +32,7 @@ Users should be able to:
 ![](./design/mobile-design.jpg)
 ![](./design/mobile-active-state.jpg)
 ![](./design/desktop-design.jpg)
-![](./design/desktop-design.jpg)
+![](./design/desktop-active-design.jpg)
 
 ### Links
 
