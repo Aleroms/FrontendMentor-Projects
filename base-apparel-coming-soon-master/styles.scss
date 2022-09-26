@@ -1,0 +1,151 @@
+//Primary
+$desaturated-red: hsl(0, 36%, 70%);
+$soft-red: hsl(0, 93%, 68%);
+//Neutral
+$dark-grayish-red: hsl(0, 6%, 24%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+}
+.header {
+  padding: 2rem 1.45rem;
+  width: 100%;
+
+  img {
+    width: 35%;
+  }
+}
+.info-container {
+  width: 100%;
+
+  .hero-bg {
+    width: 100%;
+  }
+}
+.text-box {
+  padding: 1.625rem 1.625rem 3rem 1.625rem;
+
+  text-align: center;
+
+  h1 {
+    color: $dark-grayish-red;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 12px;
+
+    padding: 0 2rem;
+  }
+  h2 {
+    color: $desaturated-red;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 32px;
+
+    letter-spacing: 12px;
+    margin: 0.625rem;
+  }
+  p {
+    color: $desaturated-red;
+    padding: 1rem;
+    font-size: 16px;
+    line-height: 1.3rem;
+  }
+  .btn {
+    display: flex;
+    position: relative;
+
+    ::placeholder {
+      color: $desaturated-red;
+      text-transform: capitalize;
+      opacity: 0.75;
+      padding: 0.225rem;
+    }
+    #email {
+      flex: 1;
+      padding: 0.625rem;
+      border: 3px solid $desaturated-red;
+      border-radius: 22px;
+      opacity: 0.5;
+    }
+    .btn-submit {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      min-width: 4rem;
+      min-height: 2.7rem;
+      flex: 0.25;
+      background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+      border: none;
+      border-radius: 22px;
+      padding: 0 0.225rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    //width: 500px;
+    //height: 100vh;
+  }
+  .info-container {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+    // display: grid;
+    // grid-template-columns: repeat(2,1fr);
+
+    .text-box {
+      flex: 1;
+      margin: 2rem;
+
+      text-align: left;
+
+      h2 {
+        margin-top: 5rem;
+        margin-left: 1rem;
+        font-size: 66px;
+      }
+      h1 {
+        font-size: 70px;
+        padding-right: 1rem;
+        padding-left: 0;
+        margin-left: 1rem;
+      }
+      p{
+        padding-left: 1rem;
+        padding-right: 9rem;
+      }
+      .btn{
+        width: 75%;
+      }
+    }
+  }
+  .hero {
+    flex: 1;
+
+    .hero-bg {
+      height: 100%;
+    }
+  }
+  .header {
+    width: 75%;
+    padding: 0;
+  }
+  .text-info{
+    margin: 3rem;
+  }
+}

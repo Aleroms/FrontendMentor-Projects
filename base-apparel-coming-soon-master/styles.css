@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+}
+
+.header {
+  padding: 2rem 1.45rem;
+  width: 100%;
+}
+.header img {
+  width: 35%;
+}
+
+.info-container {
+  width: 100%;
+}
+.info-container .hero-bg {
+  width: 100%;
+}
+
+.text-box {
+  padding: 1.625rem 1.625rem 3rem 1.625rem;
+  text-align: center;
+}
+.text-box h1 {
+  color: hsl(0deg, 6%, 24%);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: 12px;
+  padding: 0 2rem;
+}
+.text-box h2 {
+  color: hsl(0deg, 36%, 70%);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 32px;
+  letter-spacing: 12px;
+  margin: 0.625rem;
+}
+.text-box p {
+  color: hsl(0deg, 36%, 70%);
+  padding: 1rem;
+  font-size: 16px;
+  line-height: 1.3rem;
+}
+.text-box .btn {
+  display: flex;
+  position: relative;
+}
+.text-box .btn ::-moz-placeholder {
+  color: hsl(0deg, 36%, 70%);
+  text-transform: capitalize;
+  opacity: 0.75;
+  padding: 0.225rem;
+}
+.text-box .btn :-ms-input-placeholder {
+  color: hsl(0deg, 36%, 70%);
+  text-transform: capitalize;
+  opacity: 0.75;
+  padding: 0.225rem;
+}
+.text-box .btn ::placeholder {
+  color: hsl(0deg, 36%, 70%);
+  text-transform: capitalize;
+  opacity: 0.75;
+  padding: 0.225rem;
+}
+.text-box .btn #email {
+  flex: 1;
+  padding: 0.625rem;
+  border: 3px solid hsl(0deg, 36%, 70%);
+  border-radius: 22px;
+  opacity: 0.5;
+}
+.text-box .btn .btn-submit {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 4rem;
+  min-height: 2.7rem;
+  flex: 0.25;
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  border: none;
+  border-radius: 22px;
+  padding: 0 0.225rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .info-container {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+  }
+  .info-container .text-box {
+    flex: 1;
+    margin: 2rem;
+    text-align: left;
+  }
+  .info-container .text-box h2 {
+    margin-top: 5rem;
+    margin-left: 1rem;
+    font-size: 66px;
+  }
+  .info-container .text-box h1 {
+    font-size: 70px;
+    padding-right: 1rem;
+    padding-left: 0;
+    margin-left: 1rem;
+  }
+  .info-container .text-box p {
+    padding-left: 1rem;
+    padding-right: 9rem;
+  }
+  .info-container .text-box .btn {
+    width: 75%;
+  }
+  .hero {
+    flex: 1;
+  }
+  .hero .hero-bg {
+    height: 100%;
+  }
+  .header {
+    width: 75%;
+    padding: 0;
+  }
+  .text-info {
+    margin: 3rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
