@@ -1,0 +1,174 @@
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+// Accent
+$blue: hsl(248, 32%, 49%);
+//Neutral
+$dark-blue: hsl(249, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+
+@mixin shadow {
+  box-shadow: 0 5px 1px 0 rgba(0, 0, 0, 0.241);
+}
+@mixin btn-effect {
+  transform: scale(1.05);
+  transform: translateY(-10px);
+}
+body {
+  background-image: url(./images/bg-intro-mobile.png);
+  background-repeat: repeat;
+
+  background-color: $red;
+  color: white;
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text-area {
+  padding: 1rem;
+  text-align: center;
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3rem;
+    padding: 0 0.625rem;
+  }
+}
+.container {
+  padding: 1rem;
+}
+.announcement {
+  background-color: $blue;
+  border-radius: 15px;
+  padding: 0.125rem;
+  margin-bottom: 2rem;
+  @include shadow();
+
+  p {
+    font-size: 14px;
+    padding: 0 3.625rem;
+    text-align: center;
+    line-height: 1.6rem;
+  }
+}
+.form-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 5px 1px 0 rgba(0, 0, 0, 0.241);
+
+  .submit-btn {
+    background-color: $green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 92%;
+    margin: 0.625rem;
+    @include shadow();
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  .terms-n-service {
+    color: hsla(249, 10%, 26%, 0.43);
+    text-align: center;
+    font-size: 12px;
+    padding: 0 1rem;
+
+    strong {
+      a {
+        color: $red;
+        text-decoration: none;
+      }
+    }
+  }
+  form {
+    margin: 0.125rem;
+    padding: 0.125rem;
+
+    //used to alert user
+    .feedback-input {
+      border: 2px solid $red;
+    }
+
+    input {
+      width: 80%;
+      padding: 1rem;
+      margin: 0.625rem;
+      border-radius: 10px;
+      border: 1px solid hsla(0, 0%, 50%, 0.504);
+    }
+    ::placeholder {
+      font-weight: 700;
+    }
+  }
+}
+.feedback {
+  color: $red;
+  text-align: right;
+  font-size: 8px;
+  font-style: italic;
+  font-weight: 500;
+  padding-right: 1.6rem;
+  margin: 0;
+  margin-top: -0.225rem;
+  position: relative;
+  img {
+    position: absolute;
+    bottom: 2rem;
+    right: 1.625rem;
+  }
+}
+.show {
+  ::placeholder {
+    color: $red;
+  }
+}
+.hide {
+  visibility: hidden;
+}
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+  }
+  .form-area {
+    flex: 1;
+    max-width: 500px;
+  }
+  .text-area {
+    flex: 0.4;
+    text-align: start;
+    padding: 1rem 2rem;
+    margin: 1rem;
+
+    h1 {
+      font-size: 48px;
+      line-height: 4rem;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.7rem;
+    }
+  }
+  .form-container {
+    form {
+      input {
+        width: 90%;
+      }
+    }
+  }
+  .announcement:hover {
+    @include btn-effect();
+  }
+  .submit-btn:hover {
+    @include btn-effect();
+  }
+}
