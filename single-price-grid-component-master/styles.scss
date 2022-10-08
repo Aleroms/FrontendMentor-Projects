@@ -1,0 +1,159 @@
+//### Primary
+
+$cyan: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+
+//### Neutral
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  background-color: hsl(217, 48%, 81%);
+  font-family: "Karla", sans-serif;
+}
+.container {
+  max-width: 500px;
+  width: 320px;
+  border-radius: 10px;
+  padding: 3rem 0;
+  box-shadow: 3px 3px 12px 6px $grayish-blue;
+}
+.community {
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+  
+
+  .community-txt {
+    padding: 1rem;
+
+    h1 {
+      color: $cyan;
+      font-size: 20px;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      color: $bright-yellow;
+      font-size: 16px;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: $grayish-blue;
+      line-height: 1.4rem;
+      font-size: 15px;
+      margin-bottom: 1rem;
+      opacity: 0.73;
+    }
+  }
+}
+.blue-container {
+  background-color: hsl(179, 80%, 36%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 5px 5px;
+}
+.subscription {
+  padding: 1rem;
+  color: $light-gray;
+
+  h2 {
+    font-size: 18px;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 1rem;
+
+    //$29
+    :first-child {
+      font-weight: 700;
+      font-size: 30px;
+      margin-right: 1rem;
+    }
+    //per month
+    :last-child {
+      opacity: 0.73;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 0.825rem 0.625rem;
+    margin: 1.25rem 0;
+    background-color: $bright-yellow;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.152);
+  }
+}
+.testimonials {
+  padding: 1.5rem 1rem 1rem;
+  background-color: $cyan;
+  color: $light-gray;
+  border-radius: 0 0 5px 5px;
+
+  h3{
+    margin-bottom: 1rem;
+  }
+  ul {
+    list-style: none;
+    opacity: 0.73;
+
+    li {
+      margin: 0.325rem;
+    }
+  }
+}
+@media(min-width:768px){
+    .container{
+        min-width: 600px;
+        max-width: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        
+    }
+    .blue-container{
+        flex-direction: row;
+        flex: 1;
+    }
+    .testimonials{
+        flex: 1;
+        padding: 2.5rem 2rem 0;
+        border-radius: 0 0 5px 0;
+
+        ul{
+            font-size: 14px;
+        }
+    }
+    .subscription{
+        flex: 1.1;
+        padding: 2rem;
+
+        ul{
+            margin-left: 0;
+        }
+       
+    }
+    .community{
+        padding: 1rem;
+        flex: 1;
+
+        .community-txt{
+
+            h1{
+                font-size: 26px;
+            }
+        }
+    }
+}
