@@ -1,0 +1,167 @@
+$blue: hsl(223, 87%, 63%);
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$very-dark-blue: hsl(209, 33%, 12%);
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+}
+.container {
+  min-width: 375px;
+  text-align: center;
+
+  .bg-img {
+    max-width: 90%;
+  }
+}
+.hero {
+  margin: 1rem 1rem 0;
+  padding: 1rem 1rem 0;
+
+  h1 {
+    margin: 0.125rem;
+    font-weight: 300;
+    color: $gray;
+
+    span {
+      color: $very-dark-blue;
+      font-weight: 700;
+    }
+  }
+  p {
+    margin: 1rem;
+    font-size: 14px;
+  }
+  img {
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+    width: 23%;
+  }
+}
+.subscribe {
+  margin: 0 1rem 1rem;
+  padding: 0 1rem 1rem;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    input {
+      margin: 0.625rem;
+      padding: 0.625rem;
+      border-radius: 50px;
+    }
+    :first-child {
+      border: 2px solid $pale-blue;
+      margin-bottom: 0;
+
+      &::placeholder {
+        color: $pale-blue;
+      }
+      &:focus {
+        border: 2px solid $blue;
+        outline: none;
+      }
+    }
+    :last-child {
+      border: 2px solid $blue;
+      background-color: $blue;
+      box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.132);
+
+      color: white;
+      font-weight: 600;
+    }
+  }
+}
+.social {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+
+  a {
+    margin: 0 0.625rem;
+    text-decoration: none;
+    color: $blue;
+  }
+  :last-child {
+    padding: 0;
+  }
+}
+.copyright {
+  margin-top: 0.625rem;
+  color: $gray;
+  font-size: 11px;
+}
+.form-invalid {
+  border: 2px solid red !important;
+}
+#error{
+    text-align: left;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    color: red;
+    font-size: 12px;
+}
+@media (min-width: 600px) {
+  .container {
+    max-width: 600px;
+
+    .bg-img {
+      width: 78%;
+      margin-top: 1.325rem;
+    }
+  }
+  .hero {
+    h1 {
+      font-size: 36px;
+    }
+    img {
+      width: 13%;
+    }
+  }
+  .subscribe {
+    margin: 1rem;
+    padding: 1rem;
+
+    form {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      :first-child {
+        //input field that takes in email
+        flex: 0.66;
+
+        
+        
+      }
+      :last-child {
+        flex: 0.33;
+
+        &:hover {
+          cursor: pointer;
+          background-color: hsl(223, 89%, 71%);
+          border: 2px solid hsl(223, 89%, 71%);
+        }
+      }
+
+      input {
+        margin: 0 0.625rem;
+      }
+    }
+  }
+}
