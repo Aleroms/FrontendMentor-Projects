@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+$pale-blue: hsl(243, 100%, 93%);
+$grayish-blue: hsl(229, 7%, 55%);
+$dark-blue: hsl(228, 56%, 26%);
+$very-dark-blue: hsl(229, 57%, 11%);
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(./images/bg-mobile.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+.container {
+  width: 350px;
+}
+.upload {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: 0.625rem;
+  padding: 2rem;
+
+  background-color: $dark-blue;
+  border-radius: 10px 100px 10px 10px;
+
+  .logo {
+    margin: 0.625rem 0.625rem 1rem;
+    width: 45%;
+  }
+  .upload-icons {
+    display: flex;
+    flex-direction: row;
+    margin: 0.625rem;
+
+    img {
+      //icon
+      padding: 0.625rem;
+      background-color: $very-dark-blue;
+      border-radius: 6px;
+      height: 20px;
+      width: 22px;
+    }
+    :first-child {
+      margin-right: 0.625rem;
+    }
+    :last-child {
+      margin-left: 0.625rem;
+    }
+  }
+}
+.storage {
+  max-width: 350px;
+  margin: 0.625rem;
+  padding: 2rem;
+
+  background-color: $dark-blue;
+  border-radius: 6px;
+
+  text-align: center;
+  p {
+    color: $pale-blue;
+    margin-bottom: 0.625rem;
+
+    strong {
+      color: white;
+    }
+  }
+  .progress-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20px;
+    padding: 0.125rem;
+    background-color: $very-dark-blue;
+    border-radius: 15px;
+    //width: 100%;
+
+    .fill {
+      background: linear-gradient(
+        100deg,
+        hsl(6, 100%, 80%),
+        hsl(335, 100%, 65%)
+      );
+
+      //i would have a fc that returns 815gb / 1000 to make this value dynamic in larger project
+      width: 81.5%;
+      height: 17px;
+      border-radius: 50px;
+      position: relative;
+
+      .circle {
+        position: absolute;
+        right: 0;
+        height: 17px;
+        width: 17px;
+        border-radius: 50px;
+
+        background-color: white;
+      }
+    }
+  }
+  ul {
+    margin-top: 0.625rem;
+    margin-bottom: 2rem;
+    color: $pale-blue;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+}
+.space {
+  background-color: white;
+  color: $very-dark-blue;
+
+  display: flex;
+  flex-direction: row;
+
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+  border-radius: 6px;
+  bottom: 115px;
+
+  :first-child {
+    font-size: 42px;
+  }
+  :last-child {
+    color: $grayish-blue;
+    font-weight: 700;
+    padding-top: 0.225rem;
+    margin: 0.625rem;
+    text-transform: capitalize;
+  }
+  .quote {
+    opacity: 0;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url(./images/bg-desktop.png);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: $very-dark-blue;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .upload {
+    height: 150px;
+    flex: 0.5;
+  }
+  .storage {
+    flex: 1;
+    height: 80px;
+    width: 400px !important;
+    text-align: left;
+  }
+  .space {
+    right: 25%;
+    top: 38%;
+    bottom: 0;
+    height: 40px;
+
+    .quote {
+      opacity: 1;
+      position: absolute;
+      height: 30px;
+      width: 15px;
+      border-radius: 0 0 0 15px;
+      background-color: white;
+      bottom: -15%;
+      right: 0;
+    }
+  }
+}
