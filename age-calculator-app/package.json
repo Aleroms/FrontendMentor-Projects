@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@vee-validate/rules": "^4.8.4",
+    "countup.js": "^2.6.0",
     "vee-validate": "^4.8.4",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-countup": "^0.1.0",
+    "vue-countup-v2": "^4.0.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",

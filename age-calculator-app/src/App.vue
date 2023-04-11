@@ -1,5 +1,6 @@
 <script>
 import { ErrorMessage } from 'vee-validate'
+import ICountUp from 'vue-countup-v2'
 export default {
   name: 'App',
   data() {
@@ -12,10 +13,21 @@ export default {
         year: `required|min_value:1|max_value:2023`,
         month: 'required|min_value:1|max_value:12',
         day: 'required|min_value:1|max_value:31'
-      }
+      },
+      delay: 1000,
+      endVal: 120500,
+      options: {
+        useEasing: true,
+        useGrouping: true,
+        separator: ',',
+        decimal: '.',
+        prefix: '',
+        suffix: ''
+      },
+      submitted: false
     }
   },
-  components: { ErrorMessage },
+  components: { ErrorMessage, ICountUp },
   methods: {
     formSubmition(values) {
       const today = new Date()
@@ -40,6 +52,11 @@ export default {
       }
       this.months = cur_mo - user_mo
       this.years = cur_yr - user_yr
+      this.submitted = true
+    },
+    OnReady: function (instance) {
+      const that = this
+      instance.update(that.endVal + 100)
     }
   }
 }
@@ -69,15 +86,18 @@ export default {
     <div class="display">
       <ul class="items">
         <li>
-          <p class="counter">{{ this.years }}</p>
+          <p v-if="!submitted" class="counter">{{ this.years }}</p>
+          <ICountUp v-else :delay="delay" :endVal="endVal" :options="options" @ready="OnReady" />
           <p>years</p>
         </li>
         <li>
-          <p class="counter">{{ this.months }}</p>
+          <p v-if="!submitted" class="counter">{{ this.months }}</p>
+          <ICountUp v-else :delay="delay" :endVal="endVal" :options="options" @ready="OnReady" />
           <p>months</p>
         </li>
         <li>
-          <p class="counter">{{ this.days }}</p>
+          <p v-if="!submitted" class="counter">{{ this.days }}</p>
+          <ICountUp v-else :delay="delay" :endVal="endVal" :options="options" @ready="OnReady" />
           <p>days</p>
         </li>
       </ul>
